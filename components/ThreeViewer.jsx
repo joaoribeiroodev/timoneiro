@@ -93,6 +93,16 @@ export default function ThreeViewer({
     const gltfGroup = new THREE.Group();
     gltfGroup.visible = false;
     scene.add(gltfGroup);
+
+    // Contorno que acende ao redor do convés isolado — a referência
+    // visual que faltava pra conectar "isso que estou vendo" com "essa
+    // fatia do navio".
+    const sliceOutline = new THREE.LineLoop(
+      new THREE.BufferGeometry(),
+      new THREE.LineBasicMaterial({ color: 0x8ac640, transparent: true, opacity: 0.9 })
+    );
+    sliceOutline.visible = false;
+    scene.add(sliceOutline);
     const livery = getLivery(vessel.slug);
 
     if (vessel.gltfUrl) {
@@ -170,6 +180,8 @@ export default function ThreeViewer({
               vertexColors: true,
               roughness: 0.4,
               metalness: 0.12,
+              transparent: true,
+              opacity: 1,
             });
           });
 
@@ -305,6 +317,7 @@ export default function ThreeViewer({
       exteriorGroup,
       rampsGroup,
       gltfGroup,
+      sliceOutline,
       deckGroups,
       markerGroup,
       placementMode,
@@ -352,7 +365,6 @@ export default function ThreeViewer({
     });
     if (s.exteriorGroup) s.exteriorGroup.visible = !isolating;
     if (s.rampsGroup) s.rampsGroup.visible = !isolating;
-    if (s.gltfGroup) s.gltfGroup.visible = !isolating && s.gltfGroup.children.length > 0;
     if (s.markerGroup) s.markerGroup.visible = isolating;
     if (s.hull) {
       s.hull.traverse((obj) => {
@@ -362,6 +374,45 @@ export default function ThreeViewer({
           obj.material.needsUpdate = true;
         }
       });
+    }
+    // O modelo 3D real (.glb), quando existe, nunca some — só fica
+    // esmaecido ao isolar um convés, servindo de referência do casco
+    // real por trás do corte (antes ele simplesmente desaparecia, e os
+    // compartimentos ficavam flutuando sem nenhuma silhueta do navio).
+    if (s.gltfGroup && s.gltfGroup.children.length > 0) {
+      s.gltfGroup.visible = true;
+      s.gltfGroup.traverse((obj) => {
+        if (obj.isMesh) {
+          obj.material.transparent = true;
+          obj.material.opacity = isolating ? 0.16 : 1;
+          obj.material.needsUpdate = true;
+        }
+      });
+    }
+
+    // Contorno verde ao redor da área do convés isolado — marca
+    // claramente qual fatia do navio corresponde ao que está selecionado
+    // na coluna à esquerda.
+    if (s.sliceOutline) {
+      if (isolating) {
+        const deckMeta = vessel.decks.find((d) => d.code === activeDeckCode);
+        const bounds = s.deckGroups[activeDeckCode]?.userData?.bounds;
+        if (deckMeta && bounds) {
+          const margin = 1.4;
+          const y = deckMeta.z + 0.05;
+          const pts = [
+            new THREE.Vector3(bounds.minX - margin, y, bounds.minY - margin),
+            new THREE.Vector3(bounds.maxX + margin, y, bounds.minY - margin),
+            new THREE.Vector3(bounds.maxX + margin, y, bounds.maxY + margin),
+            new THREE.Vector3(bounds.minX - margin, y, bounds.maxY + margin),
+          ];
+          s.sliceOutline.geometry.dispose();
+          s.sliceOutline.geometry = new THREE.BufferGeometry().setFromPoints(pts);
+          s.sliceOutline.visible = true;
+        }
+      } else {
+        s.sliceOutline.visible = false;
+      }
     }
 
     // Enquadra a câmera no convés isolado — sem isso, as paredes dos

@@ -20,9 +20,9 @@
         "height": 2.9,
         "compartments": [
           {
-            "name": "Praça de máquinas de vante",
+            "name": "Praça de máquinas",
             "type": "maquinas",
-            "x": -30,
+            "x": 30,
             "y": 0,
             "w": 10,
             "l": 12
@@ -46,7 +46,7 @@
           {
             "name": "Sala de baterias",
             "type": "tecnico",
-            "x": -30,
+            "x": 30,
             "y": -6,
             "w": 3,
             "l": 3
@@ -60,9 +60,9 @@
         "height": 2.9,
         "compartments": [
           {
-            "name": "Praça, salão de passageiros - vante",
+            "name": "Salão de passageiros - vante",
             "type": "salao",
-            "x": -22,
+            "x": 22,
             "y": 0,
             "w": 15,
             "l": 14
@@ -78,7 +78,7 @@
           {
             "name": "Camarotes de tripulação",
             "type": "camarote",
-            "x": 26,
+            "x": -26,
             "y": 5,
             "w": 3.5,
             "l": 6
@@ -86,7 +86,7 @@
           {
             "name": "Copa",
             "type": "servico",
-            "x": 26,
+            "x": -26,
             "y": -5,
             "w": 3,
             "l": 4
@@ -116,7 +116,7 @@
         "height": 2.9,
         "compartments": [
           {
-            "name": "Salão de passageiros - proa",
+            "name": "Salão de passageiros - vante",
             "type": "salao",
             "x": 14,
             "y": 0,
@@ -243,6 +243,22 @@
             "y": 4,
             "w": 3,
             "l": 4
+          },
+          {
+            "name": "Camarote",
+            "type": "camarote",
+            "x": 0,
+            "y": -4,
+            "w": 2.5,
+            "l": 3
+          },
+          {
+            "name": "WC feminino",
+            "type": "servico",
+            "x": -18,
+            "y": 3,
+            "w": 2,
+            "l": 2
           }
         ]
       },
@@ -261,7 +277,7 @@
             "l": 30
           },
           {
-            "name": "Fraldário",
+            "name": "Fraldário masculino",
             "type": "servico",
             "x": 20,
             "y": 4,
@@ -311,7 +327,7 @@
           {
             "name": "Sala de comando",
             "type": "comando",
-            "x": 0,
+            "x": 5,
             "y": 0,
             "w": 5,
             "l": 5
@@ -382,9 +398,9 @@
         "height": 2.6,
         "compartments": [
           {
-            "name": "Praça de máquinas de vante",
+            "name": "Praça de máquinas",
             "type": "maquinas",
-            "x": -40,
+            "x": 40,
             "y": 0,
             "w": 12,
             "l": 14
@@ -392,7 +408,7 @@
           {
             "name": "Garagem inferior de veículos",
             "type": "garagem",
-            "x": 8,
+            "x": -15,
             "y": 0,
             "w": 14,
             "l": 50
@@ -400,7 +416,7 @@
           {
             "name": "Sala de baterias",
             "type": "tecnico",
-            "x": -40,
+            "x": 40,
             "y": 6,
             "w": 3,
             "l": 3
@@ -430,28 +446,44 @@
         "height": 2.8,
         "compartments": [
           {
-            "name": "Camarotes de tripulação",
+            "name": "Camarote do Capitão",
             "type": "camarote",
-            "x": 38,
+            "x": 35,
             "y": 6,
-            "w": 5,
-            "l": 10
+            "w": 3,
+            "l": 4
           },
           {
-            "name": "Copa",
-            "type": "servico",
-            "x": 38,
+            "name": "Camarote do Chefe de Máquinas",
+            "type": "camarote",
+            "x": 35,
             "y": -6,
             "w": 3,
             "l": 4
           },
           {
-            "name": "Área técnica / acomodações",
+            "name": "Beliches da tripulação",
+            "type": "camarote",
+            "x": 28,
+            "y": 0,
+            "w": 6,
+            "l": 8
+          },
+          {
+            "name": "Copa",
+            "type": "servico",
+            "x": 20,
+            "y": 6,
+            "w": 3,
+            "l": 4
+          },
+          {
+            "name": "Área técnica",
             "type": "tecnico",
-            "x": -8,
+            "x": -14,
             "y": 0,
             "w": 14,
-            "l": 55
+            "l": 50
           }
         ]
       },
@@ -486,12 +518,20 @@
             "l": 6
           },
           {
-            "name": "Elevador / WC cadeirante",
+            "name": "Elevador",
             "type": "tecnico",
             "x": 0,
-            "y": -6,
-            "w": 3,
-            "l": 3
+            "y": -5,
+            "w": 2,
+            "l": 2
+          },
+          {
+            "name": "WC cadeirante",
+            "type": "servico",
+            "x": 0,
+            "y": -8,
+            "w": 2,
+            "l": 2
           }
         ]
       },
