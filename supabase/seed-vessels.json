@@ -1,0 +1,734 @@
+[
+  {
+    "slug": "dorival-caymmi",
+    "name": "Dorival Caymmi",
+    "shipyard": "ADAMAS (Atsalakis G. Dimitrios & Sidironaytiki EPE)",
+    "doc": "121D01 · Arranjo Geral · INT-DCI-01-001",
+    "loa": 86.8,
+    "lpp": 71.96,
+    "beam": 17.56,
+    "depth": 3.9,
+    "draft": 2.72,
+    "crew": 8,
+    "passengers": 988,
+    "hull_type": "duplo-castelo",
+    "decks": [
+      {
+        "code": "inferior",
+        "name": "Convés Inferior (garagem)",
+        "z": 0,
+        "height": 2.9,
+        "compartments": [
+          {
+            "name": "Praça de máquinas de vante",
+            "type": "maquinas",
+            "x": -30,
+            "y": 0,
+            "w": 10,
+            "l": 12
+          },
+          {
+            "name": "Garagem inferior de veículos",
+            "type": "garagem",
+            "x": 0,
+            "y": 0,
+            "w": 15.5,
+            "l": 40
+          },
+          {
+            "name": "Paiol / tanque marpol",
+            "type": "paiol",
+            "x": 22,
+            "y": 6,
+            "w": 4,
+            "l": 5
+          },
+          {
+            "name": "Sala de baterias",
+            "type": "tecnico",
+            "x": -30,
+            "y": -6,
+            "w": 3,
+            "l": 3
+          }
+        ]
+      },
+      {
+        "code": "principal",
+        "name": "Convés Principal",
+        "z": 2.9,
+        "height": 2.9,
+        "compartments": [
+          {
+            "name": "Praça, salão de passageiros - vante",
+            "type": "salao",
+            "x": -22,
+            "y": 0,
+            "w": 15,
+            "l": 14
+          },
+          {
+            "name": "Garagem principal de veículos",
+            "type": "garagem",
+            "x": 0,
+            "y": 0,
+            "w": 15.5,
+            "l": 40
+          },
+          {
+            "name": "Camarotes de tripulação",
+            "type": "camarote",
+            "x": 26,
+            "y": 5,
+            "w": 3.5,
+            "l": 6
+          },
+          {
+            "name": "Copa",
+            "type": "servico",
+            "x": 26,
+            "y": -5,
+            "w": 3,
+            "l": 4
+          }
+        ]
+      },
+      {
+        "code": "intermediario",
+        "name": "Convés Intermediário",
+        "z": 5.8,
+        "height": 2.8,
+        "compartments": [
+          {
+            "name": "Salão de passageiros",
+            "type": "salao",
+            "x": 0,
+            "y": 0,
+            "w": 15,
+            "l": 44
+          }
+        ]
+      },
+      {
+        "code": "superior-1",
+        "name": "Convés Superior I",
+        "z": 8.6,
+        "height": 2.9,
+        "compartments": [
+          {
+            "name": "Salão de passageiros - proa",
+            "type": "salao",
+            "x": 14,
+            "y": 0,
+            "w": 13,
+            "l": 20
+          },
+          {
+            "name": "Salão de passageiros - popa",
+            "type": "salao",
+            "x": -14,
+            "y": 0,
+            "w": 13,
+            "l": 20
+          },
+          {
+            "name": "Sanitários / bar",
+            "type": "servico",
+            "x": 0,
+            "y": 5.5,
+            "w": 4,
+            "l": 4
+          }
+        ]
+      },
+      {
+        "code": "superior-2",
+        "name": "Convés Superior II",
+        "z": 11.5,
+        "height": 2.7,
+        "compartments": [
+          {
+            "name": "Salão de passageiros",
+            "type": "salao",
+            "x": 0,
+            "y": 0,
+            "w": 12,
+            "l": 30
+          }
+        ]
+      },
+      {
+        "code": "passadico",
+        "name": "Convés do Passadiço",
+        "z": 14.2,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Sala de comando",
+            "type": "comando",
+            "x": 0,
+            "y": 0,
+            "w": 6,
+            "l": 6
+          }
+        ]
+      }
+    ],
+    "gltf_url": "/models/dorival-caymmi.glb"
+  },
+  {
+    "slug": "rio-paraguacu",
+    "name": "Rio Paraguaçu",
+    "shipyard": "Estaleiro Só S/A",
+    "doc": "INT-RPG-01-001",
+    "loa": 71.0,
+    "lpp": 65.0,
+    "beam": 13.5,
+    "depth": 4.5,
+    "draft": 2.822,
+    "crew": 8,
+    "passengers": 789,
+    "hull_type": "duplo-castelo",
+    "decks": [
+      {
+        "code": "inferior",
+        "name": "Convés Inferior",
+        "z": 0,
+        "height": 2.8,
+        "compartments": [
+          {
+            "name": "Garagem de veículos",
+            "type": "garagem",
+            "x": 0,
+            "y": 0,
+            "w": 12,
+            "l": 34
+          },
+          {
+            "name": "Praça de máquinas",
+            "type": "maquinas",
+            "x": -24,
+            "y": 0,
+            "w": 9,
+            "l": 10
+          }
+        ]
+      },
+      {
+        "code": "principal",
+        "name": "Convés Principal",
+        "z": 2.8,
+        "height": 2.9,
+        "compartments": [
+          {
+            "name": "Salão de passageiros - vante",
+            "type": "salao",
+            "x": 12,
+            "y": 0,
+            "w": 11,
+            "l": 16
+          },
+          {
+            "name": "Salão de passageiros - popa",
+            "type": "salao",
+            "x": -12,
+            "y": 0,
+            "w": 11,
+            "l": 16
+          },
+          {
+            "name": "Lanchonete",
+            "type": "servico",
+            "x": 0,
+            "y": 4,
+            "w": 3,
+            "l": 4
+          }
+        ]
+      },
+      {
+        "code": "intermediario",
+        "name": "Convés Intermediário",
+        "z": 5.7,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Salão de passageiros",
+            "type": "salao",
+            "x": 0,
+            "y": 0,
+            "w": 11,
+            "l": 30
+          },
+          {
+            "name": "Fraldário",
+            "type": "servico",
+            "x": 20,
+            "y": 4,
+            "w": 2.5,
+            "l": 2.5
+          }
+        ]
+      },
+      {
+        "code": "superior-1",
+        "name": "Convés Superior I",
+        "z": 8.3,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Salão de passageiros em pé",
+            "type": "salao",
+            "x": 0,
+            "y": 0,
+            "w": 10,
+            "l": 24
+          }
+        ]
+      },
+      {
+        "code": "superior-2",
+        "name": "Convés Superior II",
+        "z": 10.9,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Área aberta de passageiros",
+            "type": "salao",
+            "x": 0,
+            "y": 0,
+            "w": 9,
+            "l": 18
+          }
+        ]
+      },
+      {
+        "code": "passadico",
+        "name": "Convés do Passadiço",
+        "z": 13.5,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Sala de comando",
+            "type": "comando",
+            "x": 0,
+            "y": 0,
+            "w": 5,
+            "l": 5
+          },
+          {
+            "name": "Camarote",
+            "type": "camarote",
+            "x": -8,
+            "y": 3,
+            "w": 2.5,
+            "l": 3
+          },
+          {
+            "name": "Refeitório",
+            "type": "servico",
+            "x": -8,
+            "y": -3,
+            "w": 2.5,
+            "l": 3
+          }
+        ]
+      },
+      {
+        "code": "tijupa",
+        "name": "Convés do Tijupá",
+        "z": 16.1,
+        "height": 2.4,
+        "compartments": [
+          {
+            "name": "Varanda de proa",
+            "type": "aberta",
+            "x": 8,
+            "y": 0,
+            "w": 4,
+            "l": 4
+          },
+          {
+            "name": "Varanda de popa",
+            "type": "aberta",
+            "x": -8,
+            "y": 0,
+            "w": 4,
+            "l": 4
+          }
+        ]
+      }
+    ],
+    "gltf_url": "/models/rio-paraguacu.glb"
+  },
+  {
+    "slug": "zumbi-dos-palmares",
+    "name": "Zumbi dos Palmares",
+    "shipyard": "Consunav (docagem) / Estaleiro (Arranjo Geral)",
+    "doc": "121D01 · Arranjo Geral Rev. C · EFT IM-ZP-2016-002",
+    "loa": 105.4,
+    "lpp": 89.48,
+    "beam": 18.08,
+    "depth": 3.9,
+    "draft": 2.67,
+    "crew": 10,
+    "passengers": 1104,
+    "hull_type": "duplo-castelo",
+    "decks": [
+      {
+        "code": "inferior",
+        "name": "Convés Inferior (42 carros)",
+        "z": 0,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Praça de máquinas de vante",
+            "type": "maquinas",
+            "x": -40,
+            "y": 0,
+            "w": 12,
+            "l": 14
+          },
+          {
+            "name": "Garagem inferior de veículos",
+            "type": "garagem",
+            "x": 8,
+            "y": 0,
+            "w": 14,
+            "l": 50
+          },
+          {
+            "name": "Sala de baterias",
+            "type": "tecnico",
+            "x": -40,
+            "y": 6,
+            "w": 3,
+            "l": 3
+          }
+        ]
+      },
+      {
+        "code": "principal",
+        "name": "Convés Principal (166 carros)",
+        "z": 2.6,
+        "height": 3.2,
+        "compartments": [
+          {
+            "name": "Garagem principal de veículos",
+            "type": "garagem",
+            "x": 0,
+            "y": 0,
+            "w": 16,
+            "l": 88
+          }
+        ]
+      },
+      {
+        "code": "intermediario",
+        "name": "Convés Intermediário",
+        "z": 5.8,
+        "height": 2.8,
+        "compartments": [
+          {
+            "name": "Camarotes de tripulação (4 beliches duplos)",
+            "type": "camarote",
+            "x": 38,
+            "y": 6,
+            "w": 5,
+            "l": 10
+          },
+          {
+            "name": "Copa",
+            "type": "servico",
+            "x": 38,
+            "y": -6,
+            "w": 3,
+            "l": 4
+          },
+          {
+            "name": "Área técnica / acomodações",
+            "type": "tecnico",
+            "x": -8,
+            "y": 0,
+            "w": 14,
+            "l": 55
+          }
+        ]
+      },
+      {
+        "code": "superior-1",
+        "name": "Convés Superior I (340 sentados / 247 em pé)",
+        "z": 8.6,
+        "height": 2.8,
+        "compartments": [
+          {
+            "name": "Salão de passageiros - vante",
+            "type": "salao",
+            "x": 25,
+            "y": 0,
+            "w": 16,
+            "l": 36
+          },
+          {
+            "name": "Salão de passageiros - popa",
+            "type": "salao",
+            "x": -25,
+            "y": 0,
+            "w": 16,
+            "l": 36
+          },
+          {
+            "name": "Bar",
+            "type": "servico",
+            "x": 0,
+            "y": 6,
+            "w": 4,
+            "l": 6
+          },
+          {
+            "name": "Elevador / WC cadeirante",
+            "type": "tecnico",
+            "x": 0,
+            "y": -6,
+            "w": 3,
+            "l": 3
+          }
+        ]
+      },
+      {
+        "code": "superior-2",
+        "name": "Convés Superior II (258 sentados / 255 em pé)",
+        "z": 11.4,
+        "height": 2.8,
+        "compartments": [
+          {
+            "name": "Salão de passageiros - vante",
+            "type": "salao",
+            "x": 24,
+            "y": 0,
+            "w": 15,
+            "l": 32
+          },
+          {
+            "name": "Salão de passageiros - popa",
+            "type": "salao",
+            "x": -24,
+            "y": 0,
+            "w": 15,
+            "l": 32
+          },
+          {
+            "name": "Sanitários / A/C",
+            "type": "servico",
+            "x": 0,
+            "y": 6,
+            "w": 4,
+            "l": 4
+          }
+        ]
+      },
+      {
+        "code": "passadico",
+        "name": "Convés do Passadiço",
+        "z": 14.2,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Sala de comando",
+            "type": "comando",
+            "x": 0,
+            "y": 0,
+            "w": 8,
+            "l": 8
+          }
+        ]
+      },
+      {
+        "code": "tijupa",
+        "name": "Convés do Tijupá (5 sentados)",
+        "z": 16.8,
+        "height": 2.4,
+        "compartments": [
+          {
+            "name": "Área aberta de observação",
+            "type": "aberta",
+            "x": 0,
+            "y": 0,
+            "w": 6,
+            "l": 10
+          }
+        ]
+      }
+    ],
+    "gltf_url": "/models/zumbi-dos-palmares.glb"
+  },
+  {
+    "slug": "maria-bethania",
+    "name": "Maria Bethânia",
+    "shipyard": "Estaleiro Só S.A.",
+    "doc": "121D01 · Arranjo Geral Rev. B · IM-MB-2014-002",
+    "loa": 71.0,
+    "lpp": 65.0,
+    "beam": 13.5,
+    "depth": 4.5,
+    "draft": 2.933,
+    "crew": 8,
+    "passengers": 793,
+    "hull_type": "duplo-castelo",
+    "decks": [
+      {
+        "code": "inferior",
+        "name": "Convés Inferior",
+        "z": 0,
+        "height": 2.8,
+        "compartments": [
+          {
+            "name": "Convés inferior de passageiros",
+            "type": "salao",
+            "x": 0,
+            "y": 0,
+            "w": 11,
+            "l": 24
+          },
+          {
+            "name": "Compartimento da moto-bomba de incêndio - vante",
+            "type": "tecnico",
+            "x": 24,
+            "y": 0,
+            "w": 3,
+            "l": 3
+          },
+          {
+            "name": "Compartimento da moto-bomba de incêndio - ré",
+            "type": "tecnico",
+            "x": -24,
+            "y": 0,
+            "w": 3,
+            "l": 3
+          },
+          {
+            "name": "Praça de máquinas",
+            "type": "maquinas",
+            "x": -12,
+            "y": 0,
+            "w": 9,
+            "l": 10
+          }
+        ]
+      },
+      {
+        "code": "principal",
+        "name": "Convés Principal",
+        "z": 2.8,
+        "height": 2.9,
+        "compartments": [
+          {
+            "name": "Salão de passageiros - vante (30 sentados + cadeirantes)",
+            "type": "salao",
+            "x": 12,
+            "y": 0,
+            "w": 11,
+            "l": 16
+          },
+          {
+            "name": "Salão de passageiros - popa",
+            "type": "salao",
+            "x": -12,
+            "y": 0,
+            "w": 11,
+            "l": 16
+          }
+        ]
+      },
+      {
+        "code": "intermediario",
+        "name": "Convés Intermediário",
+        "z": 5.7,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Salão de passageiros",
+            "type": "salao",
+            "x": 0,
+            "y": 0,
+            "w": 11,
+            "l": 30
+          }
+        ]
+      },
+      {
+        "code": "superior",
+        "name": "Convés Superior (268 sentados)",
+        "z": 8.3,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Salão de passageiros",
+            "type": "salao",
+            "x": 0,
+            "y": 0,
+            "w": 11,
+            "l": 34
+          }
+        ]
+      },
+      {
+        "code": "botes",
+        "name": "Convés dos Botes (24 sentados)",
+        "z": 10.9,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Área aberta / botes salva-vidas",
+            "type": "aberta",
+            "x": 0,
+            "y": 0,
+            "w": 10,
+            "l": 24
+          }
+        ]
+      },
+      {
+        "code": "passadico",
+        "name": "Passadiço",
+        "z": 13.5,
+        "height": 2.6,
+        "compartments": [
+          {
+            "name": "Sala de comando",
+            "type": "comando",
+            "x": 0,
+            "y": 0,
+            "w": 6,
+            "l": 6
+          }
+        ]
+      },
+      {
+        "code": "tijupa",
+        "name": "Tijupá",
+        "z": 16.1,
+        "height": 2.4,
+        "compartments": [
+          {
+            "name": "Varanda de proa",
+            "type": "aberta",
+            "x": 7,
+            "y": 0,
+            "w": 4,
+            "l": 4
+          },
+          {
+            "name": "Varanda de popa",
+            "type": "aberta",
+            "x": -7,
+            "y": 0,
+            "w": 4,
+            "l": 4
+          }
+        ]
+      }
+    ],
+    "gltf_url": "/models/maria-bethania.glb"
+  }
+]

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #052033;
+  color: #eef2f6;
+}
+
+.grid-paper {
+  background-color: #052033;
+  background-image: linear-gradient(rgba(138, 198, 64, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(138, 198, 64, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.title-block {
+  border: 1px solid rgba(238, 242, 246, 0.18);
+}
+
+.title-block dt {
+  color: rgba(238, 242, 246, 0.5);
+}
+
+::selection {
+  background: #8ac640;
+  color: #00192f;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(138, 198, 64, 0.4);
+  border-radius: 4px;
+}
