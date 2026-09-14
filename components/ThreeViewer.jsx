@@ -56,6 +56,8 @@ export default function ThreeViewer({
     controls.maxDistance = loa * 2.5;
     controls.minDistance = 4;
     controls.update();
+    const homeCameraPos = camera.position.clone();
+    const homeTarget = controls.target.clone();
 
     const hemi = new THREE.HemisphereLight(0xbfd8ff, 0x0a1a2b, 0.9);
     scene.add(hemi);
@@ -134,8 +136,10 @@ export default function ThreeViewer({
           // cadastradas para esse navio.
           object.updateMatrixWorld(true);
           const waterlineY = 0;
+          const stripeH = Math.max(0.15, vessel.dims.depth * 0.05);
           const hullTopY = vessel.dims.depth - vessel.dims.draft;
           const belowColor = new THREE.Color(livery.belowWaterColor);
+          const stripeColor = new THREE.Color(livery.stripeColor);
           const hullColor = new THREE.Color(livery.hullColor);
           const houseColor = new THREE.Color(livery.houseColor);
 
@@ -152,8 +156,11 @@ export default function ThreeViewer({
             const colors = new Float32Array(pos.count * 3);
             for (let i = 0; i < pos.count; i++) {
               const worldY = pos.getY(i) * yScale + yTrans;
-              const c =
-                worldY < waterlineY ? belowColor : worldY < hullTopY ? hullColor : houseColor;
+              let c;
+              if (worldY < waterlineY) c = belowColor;
+              else if (worldY < waterlineY + stripeH) c = stripeColor;
+              else if (worldY < hullTopY) c = hullColor;
+              else c = houseColor;
               colors[i * 3] = c.r;
               colors[i * 3 + 1] = c.g;
               colors[i * 3 + 2] = c.b;
@@ -161,8 +168,8 @@ export default function ThreeViewer({
             geo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
             child.material = new THREE.MeshStandardMaterial({
               vertexColors: true,
-              roughness: 0.55,
-              metalness: 0.08,
+              roughness: 0.4,
+              metalness: 0.12,
             });
           });
 
@@ -292,6 +299,8 @@ export default function ThreeViewer({
       camera,
       renderer,
       controls,
+      homeCameraPos,
+      homeTarget,
       hull,
       exteriorGroup,
       rampsGroup,
@@ -353,6 +362,35 @@ export default function ThreeViewer({
           obj.material.needsUpdate = true;
         }
       });
+    }
+
+    // Enquadra a câmera no convés isolado — sem isso, as paredes dos
+    // compartimentos ficam imperceptíveis (a câmera continua enquadrada
+    // pro navio inteiro, muito mais longe do que o tamanho do convés).
+    if (s.camera && s.controls) {
+      if (isolating) {
+        const deckMeta = vessel.decks.find((d) => d.code === activeDeckCode);
+        const bounds = s.deckGroups[activeDeckCode]?.userData?.bounds;
+        if (deckMeta && bounds) {
+          const cx = (bounds.minX + bounds.maxX) / 2;
+          const cz = (bounds.minY + bounds.maxY) / 2;
+          const span = Math.max(bounds.maxX - bounds.minX, bounds.maxY - bounds.minY, 8);
+          const dist = span * 0.68;
+          const targetY = deckMeta.z + 1.3;
+          s.camera.position.set(cx + dist * 0.6, targetY + dist * 0.55, cz + dist * 0.75);
+          s.controls.target.set(cx, targetY, cz);
+          s.controls.minDistance = 2;
+          s.controls.maxDistance = span * 3.5;
+        } else {
+          s.controls.target.set(0, 0, 0);
+        }
+      } else {
+        s.camera.position.copy(s.homeCameraPos);
+        s.controls.target.copy(s.homeTarget);
+        s.controls.minDistance = 4;
+        s.controls.maxDistance = vessel.dims.loa * 2.5;
+      }
+      s.controls.update();
     }
   }, [activeDeckCode]);
 

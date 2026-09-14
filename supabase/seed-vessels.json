@@ -377,7 +377,7 @@
     "decks": [
       {
         "code": "inferior",
-        "name": "Convés Inferior (42 carros)",
+        "name": "Convés Inferior",
         "z": 0,
         "height": 2.6,
         "compartments": [
@@ -409,7 +409,7 @@
       },
       {
         "code": "principal",
-        "name": "Convés Principal (166 carros)",
+        "name": "Convés Principal",
         "z": 2.6,
         "height": 3.2,
         "compartments": [
@@ -430,7 +430,7 @@
         "height": 2.8,
         "compartments": [
           {
-            "name": "Camarotes de tripulação (4 beliches duplos)",
+            "name": "Camarotes de tripulação",
             "type": "camarote",
             "x": 38,
             "y": 6,
@@ -457,7 +457,7 @@
       },
       {
         "code": "superior-1",
-        "name": "Convés Superior I (340 sentados / 247 em pé)",
+        "name": "Convés Superior I",
         "z": 8.6,
         "height": 2.8,
         "compartments": [
@@ -497,7 +497,7 @@
       },
       {
         "code": "superior-2",
-        "name": "Convés Superior II (258 sentados / 255 em pé)",
+        "name": "Convés Superior II",
         "z": 11.4,
         "height": 2.8,
         "compartments": [
@@ -545,7 +545,7 @@
       },
       {
         "code": "tijupa",
-        "name": "Convés do Tijupá (5 sentados)",
+        "name": "Convés do Tijupá",
         "z": 16.8,
         "height": 2.4,
         "compartments": [
@@ -623,7 +623,7 @@
         "height": 2.9,
         "compartments": [
           {
-            "name": "Salão de passageiros - vante (30 sentados + cadeirantes)",
+            "name": "Salão de passageiros - vante",
             "type": "salao",
             "x": 12,
             "y": 0,
@@ -658,7 +658,7 @@
       },
       {
         "code": "superior",
-        "name": "Convés Superior (268 sentados)",
+        "name": "Convés Superior",
         "z": 8.3,
         "height": 2.6,
         "compartments": [
@@ -674,7 +674,7 @@
       },
       {
         "code": "botes",
-        "name": "Convés dos Botes (24 sentados)",
+        "name": "Convés dos Botes",
         "z": 10.9,
         "height": 2.6,
         "compartments": [
